@@ -1,28 +1,26 @@
-import { useRef } from "react";
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { ConverterCard } from "@/components/converter/ConverterCard";
-import { HowItWorks } from "@/components/HowItWorks";
-import { FormatsSection } from "@/components/FormatsSection";
-import { FAQ } from "@/components/FAQ";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/ebook/Navbar";
+import { ProgressBar } from "@/components/ebook/ProgressBar";
+import { Hero } from "@/components/ebook/Hero";
+import { HorizontalChapter } from "@/components/ebook/HorizontalChapter";
+import { Principles } from "@/components/ebook/Principles";
+import { CTA } from "@/components/ebook/CTA";
+import { Footer } from "@/components/ebook/Footer";
+import { CHAPTERS } from "@/lib/ebook-data";
 
 const Index = () => {
-  const converterRef = useRef<HTMLDivElement>(null);
-
-  const scrollToConverter = () => {
-    converterRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar onCta={scrollToConverter} />
+      <Navbar />
+      <ProgressBar />
       <main className="flex-1">
-        <Hero onCta={scrollToConverter} />
-        <ConverterCard ref={converterRef} />
-        <HowItWorks />
-        <FormatsSection />
-        <FAQ />
+        <Hero />
+        <section id="chapters" aria-label="Kapitel">
+          {CHAPTERS.map((chapter, i) => (
+            <HorizontalChapter key={chapter.number} chapter={chapter} index={i} />
+          ))}
+        </section>
+        <Principles />
+        <CTA />
       </main>
       <Footer />
 
@@ -32,13 +30,14 @@ const Index = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebApplication",
-            name: "Convertor",
+            "@type": "Book",
+            name: "Digital Marknadsföring 2026",
+            author: { "@type": "Organization", name: "Convertor" },
+            publisher: { "@type": "Organization", name: "Convertor" },
+            inLanguage: "sv-SE",
+            bookFormat: "https://schema.org/EBook",
             description:
-              "Modern e-book converter for EPUB, MOBI, PDF, TXT and DOCX. Drop a file, pick a target format, download the result.",
-            applicationCategory: "UtilityApplication",
-            operatingSystem: "Web",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+              "En interaktiv e-bok från webbyrån Convertor om vad som faktiskt funkar inom digital marknadsföring 2026.",
           }),
         }}
       />
