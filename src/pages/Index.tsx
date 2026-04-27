@@ -1,16 +1,49 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useRef } from "react";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { ConverterCard } from "@/components/converter/ConverterCard";
+import { HowItWorks } from "@/components/HowItWorks";
+import { FormatsSection } from "@/components/FormatsSection";
+import { FAQ } from "@/components/FAQ";
+import { Footer } from "@/components/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const converterRef = useRef<HTMLDivElement>(null);
+
+  const scrollToConverter = () => {
+    converterRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen flex flex-col">
+      <Navbar onCta={scrollToConverter} />
+      <main className="flex-1">
+        <Hero onCta={scrollToConverter} />
+        <ConverterCard ref={converterRef} />
+        <HowItWorks />
+        <FormatsSection />
+        <FAQ />
+      </main>
+      <Footer />
+
+      {/* SEO: structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: "Convertor",
+            description:
+              "Modern e-book converter for EPUB, MOBI, PDF, TXT and DOCX. Drop a file, pick a target format, download the result.",
+            applicationCategory: "UtilityApplication",
+            operatingSystem: "Web",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+          }),
+        }}
+      />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
