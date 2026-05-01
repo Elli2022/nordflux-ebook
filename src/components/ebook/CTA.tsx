@@ -15,18 +15,18 @@ export function CTA() {
           BYGGA <span className="text-accent">2026</span>?
         </motion.h2>
         <p className="mt-8 text-lg md:text-xl opacity-80 max-w-2xl leading-relaxed">
-          Convertor är webbyrån som hjälper varumärken bli omöjliga att scrolla
-          förbi. Sajter, kampanjer, AI-implementationer och content som faktiskt
-          flyttar siffror.
+          Nordflux är fullservicebyrån som hjälper varumärken bli omöjliga att
+          scrolla förbi. Strategi, sajter, kampanjer, AI-implementationer och
+          content som faktiskt flyttar siffror.
         </p>
 
         <div className="mt-12 flex flex-wrap gap-4">
           <a
-            href="mailto:hello@convertor.se"
+            href="mailto:hej@nordflux.se"
             className="inline-flex items-center gap-2 rounded-md bg-primary text-primary-foreground border-2 border-background brutalist-btn px-6 py-4 text-base font-bold"
             style={{ boxShadow: "6px 6px 0 hsl(var(--background))" }}
           >
-            hello@convertor.se →
+            hej@nordflux.se →
           </a>
           <a
             href="#top"
@@ -38,7 +38,7 @@ export function CTA() {
 
         <div className="mt-20 grid md:grid-cols-3 gap-px bg-background/20 border-2 border-background/40 rounded-md overflow-hidden">
           {[
-            ["Webbproduktion", "Next-gen sajter, headless CMS, edge."],
+            ["Webb & produkt", "Next-gen sajter, headless CMS, edge-render."],
             ["Kampanj & content", "Short-form, podcast, AI-content pipelines."],
             ["Strategi & data", "GEO, first-party stack, predictive AI."],
           ].map(([t, d]) => (

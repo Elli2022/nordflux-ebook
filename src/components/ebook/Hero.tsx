@@ -29,7 +29,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-card px-3 py-1.5 text-xs font-bold uppercase tracking-wider"
         >
           <span className="h-2 w-2 rounded-full bg-primary animate-blink" />
-          E-book · Convertor 2026 Report
+          E-book · Nordflux 2026 Report
         </motion.div>
 
         <motion.h1
@@ -52,9 +52,9 @@ export function Hero() {
           className="mt-10 grid md:grid-cols-2 gap-8 items-end"
         >
           <p className="text-lg md:text-xl text-foreground/80 max-w-xl leading-relaxed">
-            Fyra kapitel om vad som faktiskt funkar nästa år. Från Convertor —
-            byrån som bygger sajter, kampanjer och varumärken som inte ser ut
-            som alla andra.
+            Fyra kapitel om vad som faktiskt funkar nästa år. Från Nordflux —
+            fullservicebyrån som bygger sajter, kampanjer och varumärken som
+            inte ser ut som alla andra.
           </p>
           <div className="flex flex-wrap gap-3 md:justify-end">
             <a

@@ -32,12 +32,12 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "Book",
             name: "Digital Marknadsföring 2026",
-            author: { "@type": "Organization", name: "Convertor" },
-            publisher: { "@type": "Organization", name: "Convertor" },
+            author: { "@type": "Organization", name: "Nordflux" },
+            publisher: { "@type": "Organization", name: "Nordflux" },
             inLanguage: "sv-SE",
             bookFormat: "https://schema.org/EBook",
             description:
-              "En interaktiv e-bok från webbyrån Convertor om vad som faktiskt funkar inom digital marknadsföring 2026.",
+              "En interaktiv e-bok från fullservicebyrån Nordflux om vad som faktiskt funkar inom digital marknadsföring 2026.",
           }),
         }}
       />

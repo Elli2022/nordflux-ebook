@@ -4,11 +4,11 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-md border-b-2 border-border">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2.5 group" aria-label="Convertor home">
+        <a href="#top" className="flex items-center gap-2.5 group" aria-label="Nordflux home">
           <div className="h-9 w-9 rounded-md bg-primary border-2 border-border grid place-items-center brutalist-btn">
-            <span className="font-display text-base text-primary-foreground">C</span>
+            <span className="font-display text-base text-primary-foreground">N</span>
           </div>
-          <span className="font-display text-lg tracking-tight">CONVERTOR</span>
+          <span className="font-display text-lg tracking-tight">NORDFLUX</span>
           <span className="ml-1 hidden sm:inline-flex items-center gap-1 rounded-full border-2 border-border bg-accent px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground">
             <Sparkles className="h-3 w-3" aria-hidden /> E-book
           </span>
