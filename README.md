@@ -6,7 +6,11 @@ An interactive editorial microsite for **Nordflux**, designed as a digital 2026 
 
 ## Live Site
 
-- GitHub Pages: [elli2022.github.io/nordflux-ebook](https://elli2022.github.io/nordflux-ebook/)
+- Netlify: [nordflux-ebook-2026.netlify.app](https://nordflux-ebook-2026.netlify.app)
+
+## Topics
+
+`react` · `typescript` · `vite` · `tailwindcss` · `framer-motion` · `netlify` · `static-site` · `digital-marketing` · `editorial-design` · `microsite`
 
 ## Project Overview
 
@@ -25,7 +29,7 @@ Instead of behaving like a traditional PDF-style report, the site is built as a 
 - scroll-based motion and section transitions
 - strong visual hierarchy with brutalist-inspired direction
 - structured long-form content in a modern React/Vite stack
-- a public static deployment flow through GitHub Pages
+- continuous deployment to Netlify from `main`
 
 ## Tech Stack
 
@@ -70,17 +74,20 @@ http://localhost:8080
 npm run build
 ```
 
-## GitHub Pages Deployment
+## Netlify Deployment
 
-The repo includes a GitHub Actions workflow that builds and deploys the static site automatically on pushes to `main`.
+The site is hosted on Netlify as **nordflux-ebook-2026** and deploys automatically when changes land on `main`.
 
 Deployment details:
 
-- platform: GitHub Pages
-- build output: `dist/`
-- base path: `/nordflux-ebook/`
+- platform: [Netlify](https://www.netlify.com/)
+- site name: `nordflux-ebook-2026`
+- build command: `npm run build`
+- publish directory: `dist/`
+- config: [netlify.toml](./netlify.toml)
+- SPA routing: handled via Netlify redirects
 
-Because this is a static Vite project, GitHub Pages is a good fit and avoids the need for a separate hosting budget for this demo.
+`netlify.toml` also sets security headers and long-lived caching for hashed assets under `/assets/`.
 
 ## Project Structure
 
