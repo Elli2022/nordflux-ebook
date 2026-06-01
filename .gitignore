@@ -13,9 +13,6 @@ dist-ssr
 *.local
 *.tsbuildinfo
 
-# Generated editor metadata
-src/tailwind.config.lov.json
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
